@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /home/guo/programme/CycleSlipDetection/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/CycleSlipDetection.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen:
+codegen: CMakeFiles/CycleSlipDetection.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,8 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean:
+clean: CMakeFiles/CycleSlipDetection.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/CycleSlipDetection.dir
+
+# All Build rule for target.
+CMakeFiles/CycleSlipDetection.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/guo/programme/CycleSlipDetection/build/CMakeFiles --progress-num=1,2,3 "Built target CycleSlipDetection"
+.PHONY : CMakeFiles/CycleSlipDetection.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/CycleSlipDetection.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guo/programme/CycleSlipDetection/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CycleSlipDetection.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guo/programme/CycleSlipDetection/build/CMakeFiles 0
+.PHONY : CMakeFiles/CycleSlipDetection.dir/rule
+
+# Convenience name for target.
+CycleSlipDetection: CMakeFiles/CycleSlipDetection.dir/rule
+.PHONY : CycleSlipDetection
+
+# codegen rule for target.
+CMakeFiles/CycleSlipDetection.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/guo/programme/CycleSlipDetection/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target CycleSlipDetection"
+.PHONY : CMakeFiles/CycleSlipDetection.dir/codegen
+
+# clean rule for target.
+CMakeFiles/CycleSlipDetection.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/clean
+.PHONY : CMakeFiles/CycleSlipDetection.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
