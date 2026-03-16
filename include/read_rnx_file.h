@@ -13,6 +13,9 @@ class RnxFileReader {
  public:
   static absl::StatusOr<std::unique_ptr<RnxFileReader>> Create(
       const std::string& input_file);
+  void ReadRnxFile();
+  void ReadRnxFileHeader();
+  void ReadRnxFileBody();
 
  private:
   std::string input_file_path_;

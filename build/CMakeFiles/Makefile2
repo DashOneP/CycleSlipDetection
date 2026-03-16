@@ -85,12 +85,12 @@ clean: CMakeFiles/CycleSlipDetection.dir/clean
 CMakeFiles/CycleSlipDetection.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/guo/programme/CycleSlipDetection/build/CMakeFiles --progress-num=1,2,3 "Built target CycleSlipDetection"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/guo/programme/CycleSlipDetection/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target CycleSlipDetection"
 .PHONY : CMakeFiles/CycleSlipDetection.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CycleSlipDetection.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guo/programme/CycleSlipDetection/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guo/programme/CycleSlipDetection/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CycleSlipDetection.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/guo/programme/CycleSlipDetection/build/CMakeFiles 0
 .PHONY : CMakeFiles/CycleSlipDetection.dir/rule
@@ -102,7 +102,7 @@ CycleSlipDetection: CMakeFiles/CycleSlipDetection.dir/rule
 # codegen rule for target.
 CMakeFiles/CycleSlipDetection.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/guo/programme/CycleSlipDetection/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target CycleSlipDetection"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/guo/programme/CycleSlipDetection/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target CycleSlipDetection"
 .PHONY : CMakeFiles/CycleSlipDetection.dir/codegen
 
 # clean rule for target.

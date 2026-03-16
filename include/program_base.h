@@ -1,7 +1,42 @@
 #ifndef CYCLESLIPDETECTION_PROGRAMBASE_H_
 #define CYCLESLIPDETECTION_PROGRAMBASE_H_
 
+#include <map>
+#include <string>
+#include <vector>
+
 namespace cycle_slip_detection {
+
+struct GnssTime {
+  int year, month, day, hour, minute;
+  double second;
+  std::string time_sys;  // 时间系统，例如 GPS, BDS, GAL 等
+};
+
+// 单观测文件数据
+struct ObsData {
+  double rnx_version;
+  GnssTime start_time;
+  GnssTime end_time;
+  std::string time_sys;
+  ObsType obs_type;
+  EpochData obs_value;
+};
+
+// 卫星系统类型
+struct ObsType {
+  char sys_code;
+  int num_types;
+  std::vector<std::string> type_list;
+};
+
+// 每个历元的观测值
+struct EpochData {
+  GnssTime epoch_time;
+  int num_sats;
+  std::vector<std::string, std::vector<double>>
+      sat_obs;  // 卫星编号和对应的观测值列表
+};
 
 #define ASSIGN_OR_RETURN_IMPL(tmp_var, lhs, rexpr) \
   auto tmp_var = (rexpr);                          \

@@ -14,6 +14,8 @@ set(CMAKE_BUILD_TYPE Debug)
 set(PROJECT_SOURCES
     src/main.cc
     src/main_app_logic.cc
+    src/read_rnx_file.cc
+    src/global_variable.cc
 
 )
 
