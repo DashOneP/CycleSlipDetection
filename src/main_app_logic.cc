@@ -29,6 +29,7 @@ absl::Status RunMainLogic(int argc, char* argv[]) {
   std::string input_file_path = absl::GetFlag(FLAGS_input_file_path);
   // 读取文件，成功则返回 RnxFileReader 对象，失败则返回错误状态
   ASSIGN_OR_RETURN(auto rnx_reader, RnxFileReader::Create(input_file_path));
+  rnx_reader->ReadRnxFile();  // 读取RINEX文件，解析数据并存储到全局变量中
 
   return absl::OkStatus();
 }

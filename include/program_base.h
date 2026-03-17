@@ -5,22 +5,14 @@
 #include <string>
 #include <vector>
 
+#include "absl/container/flat_hash_map.h"
+
 namespace cycle_slip_detection {
 
 struct GnssTime {
   int year, month, day, hour, minute;
   double second;
   std::string time_sys;  // 时间系统，例如 GPS, BDS, GAL 等
-};
-
-// 单观测文件数据
-struct ObsData {
-  double rnx_version;
-  GnssTime start_time;
-  GnssTime end_time;
-  std::string time_sys;
-  ObsType obs_type;
-  EpochData obs_value;
 };
 
 // 卫星系统类型
@@ -34,8 +26,17 @@ struct ObsType {
 struct EpochData {
   GnssTime epoch_time;
   int num_sats;
-  std::vector<std::string, std::vector<double>>
+  absl::flat_hash_map<std::string, std::vector<double>>
       sat_obs;  // 卫星编号和对应的观测值列表
+};
+
+// 单观测文件数据
+struct ObsData {
+  double rnx_version;
+  GnssTime start_time;
+  GnssTime end_time;
+  ObsType obs_type;
+  EpochData obs_value;
 };
 
 #define ASSIGN_OR_RETURN_IMPL(tmp_var, lhs, rexpr) \
