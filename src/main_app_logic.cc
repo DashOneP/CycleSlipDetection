@@ -6,8 +6,10 @@
 #include "absl/flags/flag.h"
 #include "absl/flags/parse.h"
 #include "absl/status/status.h"
+#include "global_variable.h"
 #include "program_base.h"
 #include "read_rnx_file.h"
+#include "spdlog/spdlog.h"
 
 /**
  * 目前程序为单线程计算，计划改为多线程运算
@@ -30,6 +32,11 @@ absl::Status RunMainLogic(int argc, char* argv[]) {
   // 读取文件，成功则返回 RnxFileReader 对象，失败则返回错误状态
   ASSIGN_OR_RETURN(auto rnx_reader, RnxFileReader::Create(input_file_path));
   rnx_reader->ReadRnxFile();  // 读取RINEX文件，解析数据并存储到全局变量中
+
+  // std::string sys_code;
+  // ObsManager::GetInstance().ProcessObsData(
+  //     [&](const ObsData& data) { sys_code = data.obs_type[1].sys_code; });
+  // spdlog::info(sys_code);
 
   return absl::OkStatus();
 }

@@ -35,8 +35,8 @@ struct ObsData {
   double rnx_version;
   GnssTime start_time;
   GnssTime end_time;
-  ObsType obs_type;
-  EpochData obs_value;
+  std::vector<ObsType> obs_type;
+  std::vector<EpochData> epoch_data;
 };
 
 #define ASSIGN_OR_RETURN_IMPL(tmp_var, lhs, rexpr) \
