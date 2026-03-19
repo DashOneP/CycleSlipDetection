@@ -116,6 +116,115 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named CycleSlipDetection
+
+# Build rule for target.
+CycleSlipDetection: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CycleSlipDetection
+.PHONY : CycleSlipDetection
+
+# fast build rule for target.
+CycleSlipDetection/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/build
+.PHONY : CycleSlipDetection/fast
+
+src/global_variable.o: src/global_variable.cc.o
+.PHONY : src/global_variable.o
+
+# target to build an object file
+src/global_variable.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/src/global_variable.cc.o
+.PHONY : src/global_variable.cc.o
+
+src/global_variable.i: src/global_variable.cc.i
+.PHONY : src/global_variable.i
+
+# target to preprocess a source file
+src/global_variable.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/src/global_variable.cc.i
+.PHONY : src/global_variable.cc.i
+
+src/global_variable.s: src/global_variable.cc.s
+.PHONY : src/global_variable.s
+
+# target to generate assembly for a file
+src/global_variable.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/src/global_variable.cc.s
+.PHONY : src/global_variable.cc.s
+
+src/main.o: src/main.cc.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/src/main.cc.o
+.PHONY : src/main.cc.o
+
+src/main.i: src/main.cc.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/src/main.cc.i
+.PHONY : src/main.cc.i
+
+src/main.s: src/main.cc.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/src/main.cc.s
+.PHONY : src/main.cc.s
+
+src/main_app_logic.o: src/main_app_logic.cc.o
+.PHONY : src/main_app_logic.o
+
+# target to build an object file
+src/main_app_logic.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/src/main_app_logic.cc.o
+.PHONY : src/main_app_logic.cc.o
+
+src/main_app_logic.i: src/main_app_logic.cc.i
+.PHONY : src/main_app_logic.i
+
+# target to preprocess a source file
+src/main_app_logic.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/src/main_app_logic.cc.i
+.PHONY : src/main_app_logic.cc.i
+
+src/main_app_logic.s: src/main_app_logic.cc.s
+.PHONY : src/main_app_logic.s
+
+# target to generate assembly for a file
+src/main_app_logic.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/src/main_app_logic.cc.s
+.PHONY : src/main_app_logic.cc.s
+
+src/read_rnx_file.o: src/read_rnx_file.cc.o
+.PHONY : src/read_rnx_file.o
+
+# target to build an object file
+src/read_rnx_file.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/src/read_rnx_file.cc.o
+.PHONY : src/read_rnx_file.cc.o
+
+src/read_rnx_file.i: src/read_rnx_file.cc.i
+.PHONY : src/read_rnx_file.i
+
+# target to preprocess a source file
+src/read_rnx_file.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/src/read_rnx_file.cc.i
+.PHONY : src/read_rnx_file.cc.i
+
+src/read_rnx_file.s: src/read_rnx_file.cc.s
+.PHONY : src/read_rnx_file.s
+
+# target to generate assembly for a file
+src/read_rnx_file.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CycleSlipDetection.dir/build.make CMakeFiles/CycleSlipDetection.dir/src/read_rnx_file.cc.s
+.PHONY : src/read_rnx_file.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +233,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... CycleSlipDetection"
+	@echo "... src/global_variable.o"
+	@echo "... src/global_variable.i"
+	@echo "... src/global_variable.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/main_app_logic.o"
+	@echo "... src/main_app_logic.i"
+	@echo "... src/main_app_logic.s"
+	@echo "... src/read_rnx_file.o"
+	@echo "... src/read_rnx_file.i"
+	@echo "... src/read_rnx_file.s"
 .PHONY : help
 
 
