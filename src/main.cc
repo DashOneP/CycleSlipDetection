@@ -1,7 +1,9 @@
 #include "absl/flags/flag.h"
 #include "absl/flags/parse.h"
 #include "absl/flags/usage.h"
+#include "absl/status/status.h"
 #include "main_app_logic.h"
+#include "spdlog/spdlog.h"
 /**
  * @brief Programme Entrance
  */
@@ -14,9 +16,10 @@ int main(int argc, char* argv[]) {
 
   // 2. 如果运行出错了，打印出你 Create 函数里写的报错信息！
   if (!program_status.ok()) {
-    std::cerr << "程序运行失败: " << program_status.ToString() << std::endl;
+    spdlog::error("程序运行失败: {}", program_status.ToString());
     return EXIT_FAILURE;  // 告诉 Linux 系统程序异常退出
   }
 
+  spdlog::info("程序运行成功");
   return EXIT_SUCCESS;  // 完美结束
 }

@@ -28,7 +28,7 @@ class ObsManager {
   // mu_线程锁，保护 obs_data_ 的访问，在之后所有需要访问
   // obs_data_这个数据之前，都必须对其进行上锁保护在进行操作
   mutable absl::Mutex mu_;
-  ObsData obs_data_ ABSL_GUARDED_BY(mu_);
+  ObsData obs_data_ ABSL_GUARDED_BY(mu_);  // thread_annotations.h
 };
 
 // class ObsTypeManager {

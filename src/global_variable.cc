@@ -1,27 +1,12 @@
 #include "global_variable.h"
 
+#include <vector>
+
+#include "absl/base/no_destructor.h"
+#include "absl/synchronization/mutex.h"
+#include "program_base.h"
+
 namespace cycle_slip_detection {
-
-// ObsTypeManager& ObsTypeManager::GetInstance() {
-//   static absl::NoDestructor<ObsTypeManager> instance;
-//   return *instance;
-// }
-
-// void ObsTypeManager::AddObsType(const ObsType& obs_type) {
-//   absl::MutexLock lock(&mu_);
-//   obs_types_.push_back(obs_type);
-// }
-
-// std::vector<ObsType> ObsTypeManager::GetObsTypes(char sys_code) const {
-//   absl::MutexLock lock(&mu_);
-//   std::vector<ObsType> result;
-//   for (const auto& obs_type : obs_types_) {
-//     if (obs_type.sys_code == sys_code) {
-//       result.push_back(obs_type);
-//     }
-//   }
-//   return result;  // 如果没有找到，返回一个空的 vector
-// }
 
 ObsManager& ObsManager::GetInstance() {
   static absl::NoDestructor<ObsManager> instance;

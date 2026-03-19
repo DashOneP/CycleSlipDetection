@@ -1,7 +1,6 @@
 #ifndef CYCLESLIPDETECTION_PROGRAMBASE_H_
 #define CYCLESLIPDETECTION_PROGRAMBASE_H_
 
-#include <map>
 #include <string>
 #include <vector>
 
